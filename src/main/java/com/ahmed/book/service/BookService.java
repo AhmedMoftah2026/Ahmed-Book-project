@@ -19,15 +19,11 @@ public class BookService {
         return Bookrepo.findAll();
     }
     public Book Insert(Book Book){
-        if (Book.getId()!=null){
-            throw new RuntimeException();
-        }
+
         return Bookrepo.save(Book);
     }
     public Book udate(Book Book){
-        if (Book.getId()==null){
-            throw new RuntimeException();
-        }
+
         return Bookrepo.save(Book);
     }
 

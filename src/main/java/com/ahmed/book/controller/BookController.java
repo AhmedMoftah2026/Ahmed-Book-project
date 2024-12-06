@@ -1,6 +1,6 @@
 package com.ahmed.book.controller;
 
-import com.ahmed.book.model.Auther;
+import com.ahmed.book.model.Book;
 import com.ahmed.book.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,14 +21,14 @@ public class BookController {
         return ResponseEntity.ok(bookService.findByAll());
     }
     @PostMapping("/Insert")
-    public ResponseEntity<?> Insert(@RequestBody Auther auther){
+    public ResponseEntity<?> Insert(@RequestBody Book book){
 
-        return ResponseEntity.ok( bookService.Insert(auther));
+        return ResponseEntity.ok( bookService.Insert(book));
     }
     @PostMapping("/update")
-    public ResponseEntity<?> udate(@RequestBody Auther auther){
+    public ResponseEntity<?> udate(@RequestBody Book book){
 
-        return ResponseEntity.ok(bookService.udate(auther));
+        return ResponseEntity.ok(bookService.udate(book));
     }
 
     @DeleteMapping("/{id}")

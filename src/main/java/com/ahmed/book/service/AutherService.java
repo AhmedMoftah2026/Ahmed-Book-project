@@ -19,15 +19,11 @@ public class AutherService {
         return autherRepo.findAll();
     }
     public Auther Insert(Auther auther){
-        if (auther.getId()!=null){
-            throw new RuntimeException();
-        }
+
         return autherRepo.save(auther);
     }
     public Auther udate(Auther auther){
-        if (auther.getId()==null){
-            throw new RuntimeException();
-        }
+
         return autherRepo.save(auther);
     }
 
