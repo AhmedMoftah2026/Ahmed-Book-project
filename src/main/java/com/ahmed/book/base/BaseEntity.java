@@ -38,6 +38,5 @@ public abstract class BaseEntity <ID> {
 	@LastModifiedDate
 	private Date lastModifiedDate;
 
-	
 
 }

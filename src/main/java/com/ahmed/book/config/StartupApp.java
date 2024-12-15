@@ -24,28 +24,28 @@ public class StartupApp implements CommandLineRunner {
 
 		// adding some data for authers
 		if (autherService.findAll().isEmpty()) {
-		Auther auther1 = new Auther();
-		auther1.setFullName("ALi");
+		Auther author1 = new Auther();
+		author1.setFullName("ALi");
 
-		Auther auther2 = new Auther();
-		auther2.setFullName("Mohamed");
+		Auther author2 = new Auther();
+		author2.setFullName("Mohamed");
 
-		Auther auther3 = new Auther();
-		auther3.setFullName("Ahmed");
+		Auther author3 = new Auther();
+		author3.setFullName("Ahmed");
 
-		autherService.insertAll(Arrays.asList(auther1, auther2, auther3));
+		autherService.insertAll(Arrays.asList(author1, author2, author3));
 		}
 		// adding some data for books
 		if(bookService.findAll().isEmpty()) {
 		Book book = new Book();
 		book.setName("Java JPA");
 		book.setPrice(200);
-		book.setAuther(autherService.getById(1L));
+		book.setAuther(autherService.findById(1L));
 
 		Book book2 = new Book();
 		book2.setName("Data Base Mysql");
 		book2.setPrice(300);
-		book2.setAuther(autherService.getById(1L));
+		book2.setAuther(autherService.findById(1L));
 
 		Book book3 = new Book();
 		book3.setName("Python");

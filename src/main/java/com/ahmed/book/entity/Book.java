@@ -49,6 +49,8 @@ public class Book extends BaseEntity<Long> {
 	@ManyToOne()
 	@JoinColumn(name = "auther_id")
 	private Auther auther;
+
+	private int total ;
 	
 
 

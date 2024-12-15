@@ -39,9 +39,9 @@ public class BaseService<T extends BaseEntity<ID>, ID extends Number> {
 
 	}
 
-	public T getById(ID id) {
+	public Optional<T> getById(ID id) {
 
-		return baseRepository.getById(id);
+		return baseRepository.findById(id);
 	}
 
 	public List<T> findAll() {

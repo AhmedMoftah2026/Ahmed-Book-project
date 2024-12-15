@@ -102,7 +102,7 @@ public class FileUploadService {
 
 		if (pathType.contains("authors")) {
 			// update author image path
-			Auther auther = autherService.getById(id);
+			Auther auther = autherService.findById(id);
 			auther.setImagePath(imagePath);
 			autherService.update(auther);
 

@@ -33,5 +33,5 @@ public class BookDto extends BaseDto<Long> {
 	
 	private Boolean isFavorate;
 
-	
+	private int x , y;
 }

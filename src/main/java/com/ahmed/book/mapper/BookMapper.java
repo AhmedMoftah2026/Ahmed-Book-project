@@ -18,8 +18,13 @@ public interface BookMapper {
 
 	@Mapping(source = "autherName" , target = "auther.fullName")
 	@Mapping(source = "autherEmail" , target = "auther.email")
+	@Mapping(source = "java(getTotal(dto.x , dto.y))" , target = "total")
 	Book unMap(BookDto dto);
 	
-	
+
+
+	private int getTotal (int x , int y){
+		return x+y;
+	}
 
 }
